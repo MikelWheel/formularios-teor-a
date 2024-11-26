@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        var deslizante = document.getElementById("rango");
+        var salida = document.getElementById("nota");
+        salida.innerHTML = deslizante.value;
+        deslizante.oninput = function(){
+        salida.innerHTML = this.value;
+        }
+
+    </script>
+</head>
+<body>
+    <h2>Formulario</h2>
+
+
+        <form action="recogida_datos">
+
+            <p>
+                nombre
+                <input type="text" name="nombre" id="nombre" required>
+            </p>
+
+            <p>
+                apellidos
+                <input type="text" name="apellidos"  id="apellidos">
+            </p>
+
+            <p>
+                password
+                <input type="password" name="contraseña" id="contraseña">
+            </p>
+
+            <p>
+                hidden
+                <input type="hidden" name="oculto" id="oculto" value="33">
+            </p>
+
+            <p>
+                number
+                <input type="number" name="número" id="número" min="10" max="999" step="10">
+            </p>
+
+            <p>
+                search
+                <input type="search" name="buscar" id="buscar">
+            </p>
+
+            <p>
+                teléfono
+                <input type="tel" name="teléfono">
+            </p>
+
+            <p>
+                url
+                <input type="url" name="web" id="web">
+            </p>
+
+            <p>
+                email
+                <input type="email" name="correo" id="correo">
+            </p>
+
+            <p>
+                date aniversario
+                <input type="date" name="fecha" id="fecha">
+            </p>
+
+            <p>
+                date mes 
+                <input type="month" name="f_mes" id="f_mes">
+            </p>
+
+            <p>
+                date semana 
+                <input type="week" name="f_semana" id="f_semana">
+            </p>
+
+            <p>
+                time
+                <input type="time" name="hora" id="hora">
+            </p>
+
+
+            <p>
+                salida hotel +2h<input type="checkbox" name="check" id="check" checked>
+            </p>
+            <p>
+                Vehículo para venir al instituto
+                <input type="checkbox" name="bici" value="bici">bici
+                <input type="checkbox" name="coche" value="coche">coche
+                <input type="checkbox" name="moto" value="moto">moto
+
+
+
+            </p>
+            <p>
+                Selecciona tu color favorito
+               
+                <input type="radio" name="color" id="amarillo" value="amarillo">amarillo
+                <input type="radio" name="color" id="verde" value="verde">verde
+                <input type="radio" name="color" id="rojo" value="rojo">rojo
+                <input type="radio" name="color" id="no color" value="no he elegido color">no he elegido color
+
+            </p>
+
+            <p>
+                <input type="color" name="mycolour" id="mycolour"> 
+            </p>
+
+            <p>
+                selecciona tu nota del módulo (0,10)<input type="range" name="rango" id="rango" min="0" max="10" step="1">
+            </p>
+            <p>
+                Nota: <span id="nota"></span>
+            </p>
+      
+
+
+            <p>
+                <input type="file" name="archivo" id="archivo">
+            </p>
+
+
+            <p>
+                <textarea name="observacion" id="observacion" cols="30" rows="10"></textarea>
+            </p>
+
+            
+            <p>
+                <input type="submit" value="botón enviar">
+                <input type="reset" value="restablecer">
+                <input type="button" value="hazme-click" id="">
+            </p>
+
+
+
+
+        </form>
+
+
+
+
+
+</body>
+</html>
